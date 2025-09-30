@@ -19,6 +19,8 @@
     "@strapi/plugin-users-permissions": "5.24.2",
     "@strapi/strapi": "5.24.2",
     "better-sqlite3": "11.3.0",
+    "pg": "^8.16.3",
+    "postgres": "^3.4.7",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
