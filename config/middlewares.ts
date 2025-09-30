@@ -1,4 +1,5 @@
 export default [
+  "global::logproto",
   "strapi::logger",
   "strapi::errors",
   "strapi::security",
