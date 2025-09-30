@@ -1,0 +1,24 @@
+{
+  "collectionName": "groups",
+  "info": {
+    "singularName": "group",
+    "pluralName": "groups",
+    "displayName": "Group"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false
+    },
+    "sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::section.section",
+      "populate": "*"
+    }
+  }
+}

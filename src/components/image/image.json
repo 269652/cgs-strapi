@@ -1,0 +1,19 @@
+{
+  "collectionName": "images",
+  "info": {
+    "displayName": "Image",
+    "icon": "image"
+  },
+  "attributes": {
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": ["images"]
+    },
+    "alt": {
+      "type": "string",
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "displayName": "Page",
+  "info": {
+    "singularName": "page",
+    "pluralName": "pages",
+    "displayName": "Page"
+  },
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "content": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::component.component",
+      "populate": true
+    },
+    "groups": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::group.group",
+      "populate": {
+        "sections": {
+          "populate": {
+            "content": {
+              "populate": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

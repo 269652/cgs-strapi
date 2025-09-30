@@ -1,0 +1,16 @@
+export default {
+  displayName: 'Component',
+  attributes: {
+    type: {
+      type: 'enumeration',
+      enum: ['imageGallery', 'otherComponentType'],
+      required: true,
+    },
+    imageGallery: {
+      type: 'relation',
+      relation: 'oneToOne',
+      target: 'api::image-gallery.image-gallery',
+    },
+    // Add other component relations here as needed
+  },
+};

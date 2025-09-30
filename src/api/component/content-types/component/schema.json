@@ -1,0 +1,23 @@
+{
+  "collectionName": "components",
+  "info": {
+    "singularName": "component",
+    "pluralName": "components",
+    "displayName": "Component"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "type": {
+      "type": "enumeration",
+      "enum": ["imageGallery", "otherComponentType"],
+      "required": true
+    },
+    "imageGallery": {
+      "type": "component",
+      "repeatable": false,
+      "component": "image-gallery.image-gallery"
+    }
+  }
+}

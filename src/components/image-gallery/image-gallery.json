@@ -1,0 +1,26 @@
+{
+  "collectionName": "image_galleries",
+  "info": {
+    "displayName": "ImageGallery",
+    "icon": "images"
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "ctaLink": {
+      "type": "string"
+    },
+    "ctaLabel": {
+      "type": "string"
+    },
+    "images": {
+      "type": "component",
+      "repeatable": true,
+      "component": "image.image"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "sections",
+  "info": {
+    "singularName": "section",
+    "pluralName": "sections",
+    "displayName": "Section"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "bgImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "bgColor": {
+      "type": "string",
+      "required": false
+    },
+    "content": {
+      "type": "dynamiczone",
+      "components": ["image-gallery.image-gallery","triple-tease.triple-tease", "image.image", "teaser.teaser"]
+    }
+  }
+}

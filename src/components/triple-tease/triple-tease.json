@@ -1,0 +1,20 @@
+{
+  "collectionName": "triple_teases",
+  "info": {
+    "displayName": "TripleTease",
+    "icon": "columns"
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "teasers": {
+      "type": "component",
+      "repeatable": true,
+      "min": 3,
+      "max": 3,
+      "component": "teaser.teaser"
+    }
+  }
+}
