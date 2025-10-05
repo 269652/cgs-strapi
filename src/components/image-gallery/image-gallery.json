@@ -17,10 +17,16 @@
     "ctaLabel": {
       "type": "string"
     },
+    "variant": {
+      "type": "enumeration",
+      "enum": ["slider", "grid"],
+      "default": "slider"
+    },
     "images": {
-      "type": "component",
-      "repeatable": true,
-      "component": "image.image"
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": ["images"]
     }
   }
 }

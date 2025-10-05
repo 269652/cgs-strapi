@@ -9,9 +9,11 @@ export interface ImageGalleryImageGallery extends Struct.ComponentSchema {
   attributes: {
     ctaLabel: Schema.Attribute.String;
     ctaLink: Schema.Attribute.String;
-    images: Schema.Attribute.Component<'image.image', true>;
+    images: Schema.Attribute.Media<'images', true>;
     subtitle: Schema.Attribute.String;
     title: Schema.Attribute.String;
+    variant: Schema.Attribute.Enumeration<['slider', 'grid']> &
+      Schema.Attribute.DefaultTo<'slider'>;
   };
 }
 
