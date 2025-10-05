@@ -27,6 +27,41 @@ export interface ImageImage extends Struct.ComponentSchema {
   };
 }
 
+export interface PageFooter extends Struct.ComponentSchema {
+  collectionName: 'components_page_footers';
+  info: {
+    description: 'Page footer component';
+    displayName: 'Footer';
+  };
+  attributes: {
+    copyright: Schema.Attribute.String;
+  };
+}
+
+export interface PageGroup extends Struct.ComponentSchema {
+  collectionName: 'components_page_groups';
+  info: {
+    description: 'A group containing content and sections';
+    displayName: 'Group';
+  };
+  attributes: {
+    bgImage: Schema.Attribute.Media<'images'>;
+    content: Schema.Attribute.Relation<'oneToMany', 'api::content.content'>;
+    sections: Schema.Attribute.Relation<'oneToMany', 'api::section.section'>;
+  };
+}
+
+export interface PageRow extends Struct.ComponentSchema {
+  collectionName: 'components_page_rows';
+  info: {
+    description: 'Row containing multiple groups';
+    displayName: 'Row';
+  };
+  attributes: {
+    groups: Schema.Attribute.Component<'page.group', true>;
+  };
+}
+
 export interface TeaserTeaser extends Struct.ComponentSchema {
   collectionName: 'teasers';
   info: {
@@ -70,6 +105,9 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'image-gallery.image-gallery': ImageGalleryImageGallery;
       'image.image': ImageImage;
+      'page.footer': PageFooter;
+      'page.group': PageGroup;
+      'page.row': PageRow;
       'teaser.teaser': TeaserTeaser;
       'triple-tease.triple-tease': TripleTeaseTripleTease;
     }

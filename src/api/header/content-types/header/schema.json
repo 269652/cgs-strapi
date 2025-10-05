@@ -1,0 +1,35 @@
+{
+  "displayName": "Header",
+  "info": {
+    "singularName": "header",
+    "pluralName": "headers",
+    "displayName": "Header",
+    "description": "Reusable header content type"
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "logo": {
+      "type": "media",
+      "allowedTypes": ["images"],
+      "multiple": false,
+      "required": false
+    },
+    "impressum": {
+      "type": "text"
+    },
+    "images": {
+      "type": "media",
+      "allowedTypes": ["images"],
+      "multiple": true,
+      "max": 2,
+      "required": false
+    }
+  },
+  "options": {
+    "draftAndPublish": true
+  }
+}

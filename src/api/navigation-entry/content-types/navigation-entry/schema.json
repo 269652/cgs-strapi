@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "navigation_entries",
+  "info": {
+    "singularName": "navigation-entry",
+    "pluralName": "navigation-entries",
+    "displayName": "Navigation Entry",
+    "description": "Individual menu items that belong to navigation categories"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "label": {
+      "type": "string",
+      "required": true
+    },
+    "link": {
+      "type": "string",
+      "required": true
+    },
+    "order": {
+      "type": "integer",
+      "required": true,
+      "default": 0
+    },
+    "category": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::navigation-category.navigation-category",
+      "inversedBy": "navigation_entries"
+    }
+  }
+}

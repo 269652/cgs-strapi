@@ -2,8 +2,8 @@ export default {
   routes: [
     {
       method: 'GET',
-      path: '/groups',
-      handler: 'group.find',
+      path: '/columns',
+      handler: 'column.find',
       config: {
         policies: [],
         middlewares: [],
@@ -11,8 +11,8 @@ export default {
     },
     {
       method: 'GET',
-      path: '/groups/:id',
-      handler: 'group.findOne',
+      path: '/columns/:id',
+      handler: 'column.findOne',
       config: {
         policies: [],
         middlewares: [],
@@ -20,8 +20,8 @@ export default {
     },
     {
       method: 'POST',
-      path: '/groups',
-      handler: 'group.create',
+      path: '/columns',
+      handler: 'column.create',
       config: {
         policies: [],
         middlewares: [],
@@ -29,8 +29,8 @@ export default {
     },
     {
       method: 'PUT',
-      path: '/groups/:id',
-      handler: 'group.update',
+      path: '/columns/:id',
+      handler: 'column.update',
       config: {
         policies: [],
         middlewares: [],
@@ -38,8 +38,8 @@ export default {
     },
     {
       method: 'DELETE',
-      path: '/groups/:id',
-      handler: 'group.delete',
+      path: '/columns/:id',
+      handler: 'column.delete',
       config: {
         policies: [],
         middlewares: [],

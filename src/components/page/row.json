@@ -1,0 +1,14 @@
+{
+  "collectionName": "components_page_rows",
+  "info": {
+    "displayName": "Row",
+    "description": "Row containing multiple groups"
+  },
+  "attributes": {
+    "groups": {
+      "type": "component",
+      "repeatable": true,
+      "component": "page.group"
+    }
+  }
+}

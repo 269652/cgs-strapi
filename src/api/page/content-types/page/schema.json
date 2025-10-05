@@ -11,25 +11,19 @@
       "required": true,
       "unique": true
     },
-    "content": {
+    "header": {
       "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::component.component",
-      "populate": true
+      "relation": "manyToOne",
+      "target": "api::header.header"
     },
-    "groups": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::group.group",
-      "populate": {
-        "sections": {
-          "populate": {
-            "content": {
-              "populate": true
-            }
-          }
-        }
-      }
+    "footer": {
+      "type": "component",
+      "repeatable": false,
+      "component": "page.footer"
+    },
+    "pageContent": {
+      "type": "dynamiczone",
+      "components": ["page.row", "page.group"]
     }
   }
 }

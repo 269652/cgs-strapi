@@ -1,14 +1,29 @@
 {
+  "kind": "collectionType",
   "collectionName": "sections",
   "info": {
     "singularName": "section",
     "pluralName": "sections",
-    "displayName": "Section"
+    "displayName": "Section",
+    "description": "Content sections with title as main field",
+    "mainField": "title"
   },
   "options": {
     "draftAndPublish": true
   },
+  "pluginOptions": {
+    "content-manager": {
+      "visible": true
+    }
+  },
   "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "unique": false,
+      "minLength": 1,
+      "default": "New Section"
+    },
     "bgImage": {
       "type": "media",
       "multiple": false,

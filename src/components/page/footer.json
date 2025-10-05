@@ -1,0 +1,12 @@
+{
+  "collectionName": "components_page_footers",
+  "info": {
+    "displayName": "Footer",
+    "description": "Page footer component"
+  },
+  "attributes": {
+    "copyright": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_page_groups",
+  "info": {
+    "displayName": "Group",
+    "description": "A group containing content and sections"
+  },
+  "options": {},
+  "attributes": {
+    "bgImage": {
+      "type": "media",
+      "allowedTypes": ["images"],
+      "multiple": false,
+      "required": false
+    },
+    "content": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content.content"
+    },
+    "sections": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::section.section"
+    }
+  }
+}
