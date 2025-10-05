@@ -699,9 +699,14 @@ export interface ApiSectionSection extends Struct.CollectionTypeSchema {
         'teaser.teaser',
       ]
     >;
+    contentRelation: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::content.content'
+    >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    inline: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',

@@ -37,6 +37,16 @@
     "content": {
       "type": "dynamiczone",
       "components": ["image-gallery.image-gallery","triple-tease.triple-tease", "image.image", "teaser.teaser"]
+    },
+    "contentRelation": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content.content"
+    },
+    "inline": {
+      "type": "boolean",
+      "default": false,
+      "required": false
     }
   }
 }
